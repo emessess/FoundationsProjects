@@ -1,2 +1,3 @@
 const haiku = require('./haiku');
-haiku.createHaiku([3, 5, 3]);
+//input: each arg is one line, represented by an array of words by syllable
+haiku.createHaiku([1, 3, 1], [2, 5], [1, 3, 1]);
