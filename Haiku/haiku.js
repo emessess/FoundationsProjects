@@ -3,7 +3,9 @@ const fs = require('fs');
 // processing CMUDict toString
 const dictionary = fs.readFileSync('./cmudict.txt').toString();
 //removing alternate pronunciations
-const dictArray = dictionary.split('\n').map(entry => entry.split(' ')).filter(el => el[0].indexOf('(') === -1);
+const dictArray = dictionary.split('\n')
+    .map(entry => entry.split(' '))
+    .filter(el => el[0].indexOf('(') === -1);
 
 //function for counting syls in a given entry
 const countSyllables = arr => 
